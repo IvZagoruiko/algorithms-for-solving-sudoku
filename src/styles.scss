@@ -1,0 +1,49 @@
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+.sudoku {
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+  text-align: center;
+  background: #fdfdfd;
+  border: 1px solid #b1b1b1;
+  border-collapse: collapse;
+
+  .column {
+    width: 25px;
+    height: 25px;
+    border: 1px solid #b1b1b1;
+    font-size: 20px;
+
+    &:first-child {
+      border-left:solid;
+    }
+    &:nth-child(3n) {
+      border-right:solid ;
+    }
+  }
+
+  .row {
+    &:first-child {
+      border-top:solid;
+    }
+    &:nth-child(3n) td {
+      border-bottom:solid ;
+    }
+  }
+}
+
+.buttons {
+  text-align: center;
+  margin: 15px auto;
+
+  button.button {
+    margin: 0 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+}
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

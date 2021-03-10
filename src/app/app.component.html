@@ -1,0 +1,16 @@
+<div class="algorithms">
+  <div class="algorithms-complexity">
+    <label class="label">Choose complexity:</label>
+    <mat-radio-group class="radio-group" [(ngModel)]="currLevel" (change)="generateSudoku()">
+      <mat-radio-button class="radio-button"
+                        *ngFor="let key of complexityKeys"
+                        [value]="complexity[key]">
+        {{key}}
+      </mat-radio-button>
+    </mat-radio-group>
+  </div>
+  <div class="games">
+    <app-backtracking class="block" [puzzle]="puzzle"></app-backtracking>
+    <app-constraint class="block" [puzzle]="puzzle"></app-constraint>
+  </div>
+</div>

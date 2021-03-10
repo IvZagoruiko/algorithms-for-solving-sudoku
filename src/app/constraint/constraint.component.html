@@ -1,0 +1,17 @@
+<div class="constraint">
+  <h3>Constraint propagation algorithm</h3>
+  <table class="sudoku">
+    <tr class="row" *ngFor="let row of state">
+      <td class="column" *ngFor="let col of row">
+        {{col ? col : ''}}
+      </td>
+    </tr>
+  </table>
+  <div class="data">
+    <p>Time: {{time}} ms</p>
+  </div>
+  <div class="buttons">
+    <button class="button" mat-raised-button (click)="solve()">Solve</button>
+    <button class="button" mat-raised-button (click)="initState()">Restart</button>
+  </div>
+</div>
